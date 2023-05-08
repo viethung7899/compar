@@ -57,8 +57,15 @@ lazyFactor = () => Parser.lazyChoice(
 ))
 lazyTerm = () => Parser.chainLeft(lazyFactor(), mulDiv);
 
+const evaluate = (expr: Expression): number => {
+  switch (expr.type) {
+    case "number": return expr.value;
+    case "binaryExpression": return Operation[expr.operator](evaluate(expr.left), evaluate(expr.right));
+  }
+}
+
 
 export default {
   expr: lazyExpr(),
-  plusMinus
+  evaluate
 }
