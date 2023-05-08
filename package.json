@@ -1,0 +1,21 @@
+{
+  "name": "compar",
+  "version": "0.1.0",
+  "description": "Combinator parser with zero dependency",
+  "main": "index.ts",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "author": "Viet-Hung Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "pathe": "^1.1.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vitest": "^0.31.0"
+  }
+}
